@@ -1,0 +1,25 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: Pkg Query Application
+  datasource:
+    password: passwd
+    username: user
+    url: jdbc:mysql://1.1.1.1:3306/daf?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+logging:
+  file:
+    name: pkg.log
+  level:
+    cc.orcl.pkgquery.dao: debug
